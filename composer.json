@@ -1,12 +1,12 @@
 {
     "name": "hmones/laravel-redirect",
-    "description": ":package_description",
+    "description": "Redirects users automatically after login to the previous protected route they were trying to access",
     "license": "MIT",
     "authors": [
         {
-            "name": "Author Name",
-            "email": "author@email.com",
-            "homepage": "http://author.com"
+            "name": "Haytahm Mones",
+            "email": "haytham.mones@gmail.com",
+            "homepage": "https://www.haythammones.com"
         }
     ],
     "homepage": "https://github.com/hmones/laravel-redirect",
