@@ -16,6 +16,7 @@
         "test": "vendor/bin/phpunit"
     },
     "require": {
+        "ext-json": "*",
         "composer-runtime-api": "^2.0",
         "illuminate/support": "~7|~8"
     },
