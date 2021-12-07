@@ -25,7 +25,7 @@ class RedirectRequest
                 'required',
                 'url',
                 Rule::notIn($this->excludedRoutes()),
-            ], $this->parameterRegex() ? ['regex:' . $this->parameterRegex()] : []),
+            ], $this->parameterRegex() ? ['regex:'.$this->parameterRegex()] : []),
         ];
     }
 
