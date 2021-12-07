@@ -15,7 +15,7 @@ class AddRedirectPage
     public function handle(Request $request, Closure $next)
     {
         if (Auth::guest() && ! in_array($request->url(), $this->excludedRoutes())) {
-            Cookie::queue('previousUrl', $request->url());;
+            Cookie::queue('previousUrl', $request->url());
         }
 
         return $next($request);
