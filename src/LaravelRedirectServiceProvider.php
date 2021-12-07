@@ -2,7 +2,6 @@
 
 namespace Hmones\LaravelRedirect;
 
-use Hmones\LaravelRedirect\Http\Middleware\AddRedirectLink;
 use Hmones\LaravelRedirect\Http\Middleware\AddRedirectPage;
 use Hmones\LaravelRedirect\Http\Middleware\AddRedirectParameter;
 use Hmones\LaravelRedirect\Http\Middleware\RedirectToPage;

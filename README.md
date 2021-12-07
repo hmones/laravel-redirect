@@ -2,7 +2,7 @@
 
 <p align="center">
 <a href="https://github.com/hmones/laravel-redirect/actions"><img src="https://github.com/hmones/laravel-redirect/actions/workflows/build.yml/badge.svg" alt="Build Status"></a>
-<a href="https://github.styleci.io/repos/390311402"><img src="https://github.styleci.io/repos/390311402/shield" alt="Style CI"></a>
+<a href="https://github.styleci.io/repos/435492427"><img src="https://github.styleci.io/repos/435492427/shield" alt="Style CI"></a>
 <a href="https://packagist.org/packages/hmones/laravel-redirect"><img src="http://poser.pugx.org/hmones/laravel-redirect/downloads" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/hmones/laravel-redirect"><img src="https://img.shields.io/github/v/release/hmones/laravel-redirect" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/hmones/laravel-redirect"><img src="http://poser.pugx.org/hmones/laravel-redirect/license" alt="License"></a>

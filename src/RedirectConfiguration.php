@@ -19,7 +19,7 @@ trait RedirectConfiguration
         return [
             route(config('laravel-redirect.routes.login')),
             route(config('laravel-redirect.routes.default')),
-            route(config('laravel-redirect.routes.logout'))
+            route(config('laravel-redirect.routes.logout')),
         ];
     }
 

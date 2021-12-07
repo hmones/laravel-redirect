@@ -24,8 +24,8 @@ class RedirectRequest
             $this->parameterName() => array_merge([
                 'required',
                 'url',
-                Rule::notIn($this->excludedRoutes())
-            ], $this->parameterRegex() ? ['regex:' . $this->parameterRegex()] : [])
+                Rule::notIn($this->excludedRoutes()),
+            ], $this->parameterRegex() ? ['regex:' . $this->parameterRegex()] : []),
         ];
     }
 
