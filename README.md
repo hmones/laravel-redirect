@@ -26,22 +26,42 @@ To publish the package configuration
 php artisan vendor:publish --tag=laravel-redirect-config
  ```
 
-The configuration contains the following values:
-
-```php
-    'login' => [
-        'route' => env('LOGIN_ROUTE_NAME', 'login')
-    ],
-    'parameter' => env('REDIRECT_PARAMETER', 'redirect')
-```
-
-- The **route** attribute represents the name of the route that normally users use to login to the application.
-- The **parameter** attribute represents the name of the redirect attribute that will be added to the login url in case of unauthenticated user access.
+The configuration file contains the following parameters:
+- `web_middleware`: the name of your application's web middleware
+    - **Env variable**: `WEB_MIDDLEWARE`
+    - **Default value**: `web`
+- `parameter.enabled` whether you would like to enable parameter redirect on your application, once enabled a user can be redirected for example after login given that their login url was as in this example: `https://mydomain.com/login?redirect=https://another-url.com`
+    - **Env variable**: `REDIRECT_PARAMETER_ENABLED`
+    - **Default value**: `true`
+- `parameter.name` if parameter redirect is enabled, you can customize the query parameter used to capture the redirect link
+    - **Env variable**: `REDIRECT_PARAMETER`
+    - **Default value**: `redirect`
+- `parameter.regex` if parameter redirect is enabled, you can add a regex to check the redirect query parameter e.g. `/^.*mydomain\.com$/`
+    - **Env variable**: `REDIRECT_REGEX`
+    - **Default value**: `null`
+- `routes.login` the name of the login route used by your application
+    - **Env variable**: `LOGIN_ROUTE_NAME`
+    - **Default value**: `login`
+- `routes.logout` the name of the logout route used by your application
+    - **Env variable**: `LOGOUT_ROUTE_NAME`
+    - **Default value**: `logout`
+- `routes.default` the name of the route that the user is redirected to by default after login
+    - **Env variable**: `DEFAULT_ROUTE_NAME`
+    - **Default value**: `home`
 
 ## Usage
 
 - Install the package
-- Add the configuration parameter to your `.env` file or publish the package configuration to modify it.
+- Adjust the configuration parameters in your `.env` file or publish the package configuration file to modify it.
+- Add the package service provider at the end of the providers array in your app configuration file `config\app.php`
+```php
+    'providers' => [
+        
+        ...
+        
+        Hmones\LaravelRedirect\LaravelRedirectServiceProvider::class
+    ],
+```
 
 ## Change log
 

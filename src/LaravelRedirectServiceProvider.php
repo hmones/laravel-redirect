@@ -3,18 +3,19 @@
 namespace Hmones\LaravelRedirect;
 
 use Hmones\LaravelRedirect\Http\Middleware\AddRedirectLink;
-use Hmones\LaravelRedirect\Http\Middleware\RedirectToLink;
+use Hmones\LaravelRedirect\Http\Middleware\AddRedirectPage;
+use Hmones\LaravelRedirect\Http\Middleware\AddRedirectParameter;
 use Hmones\LaravelRedirect\Http\Middleware\RedirectToPage;
-use Illuminate\Routing\Router;
+use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Support\ServiceProvider;
 
 class LaravelRedirectServiceProvider extends ServiceProvider
 {
-    public function boot(): void
+    public function boot(Kernel $kernel): void
     {
-        $this->app->make(Router::class)
-            ->prependMiddlewareToGroup('web', AddRedirectLink::class)
-            ->pushMiddlewareToGroup('web', RedirectToPage::class);
+        $kernel->pushMiddleware(AddRedirectParameter::class);
+        $kernel->appendMiddlewareToGroup(config('laravel-redirect.web_middleware'), AddRedirectPage::class);
+        $kernel->appendMiddlewareToGroup(config('laravel-redirect.web_middleware'), RedirectToPage::class);
 
         if ($this->app->runningInConsole()) {
             $this->bootForConsole();
