@@ -1,6 +1,6 @@
 <?php
 
-namespace Hmones\LaravelFacade\Tests;
+namespace Hmones\LaravelRedirect\Tests;
 
 use Hmones\LaravelRedirect\LaravelRedirectServiceProvider;
 use Orchestra\Testbench\TestCase as Test;
