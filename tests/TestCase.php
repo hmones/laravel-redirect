@@ -20,7 +20,7 @@ class TestCase extends Test
     protected $userData = [
         'email'    => 'test@test.test',
         'name'     => 'user',
-        'password' => 'password'
+        'password' => 'password',
     ];
 
     protected function getPackageProviders($app): array
