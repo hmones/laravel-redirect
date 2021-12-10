@@ -58,6 +58,7 @@ class TestCase extends Test
             if (auth()->guest()) {
                 return redirect(route('login'));
             }
+
             return response('protected');
         })->name('protected');
 
