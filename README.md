@@ -8,7 +8,11 @@
 <a href="https://packagist.org/packages/hmones/laravel-redirect"><img src="http://poser.pugx.org/hmones/laravel-redirect/license" alt="License"></a>
 </p>
 
-This package helps users get redirected automatically after their login attempt to the previous protected route they were trying to access:
+This package is a configurable add-on to your laravel application that allows you to do the following:
+- Redirect users back to the protected (needs-authorization) page they wanted to visit right after they log-in instead of the default page.
+- Redirect users to a particular destination inside or outside your application by providing that link in a url parameter when logging in or on any of your application pages (e.g. https://your-domain.com/login?redirect=https://another-domain.com).
+- Configure the redirect parameter, disable it, make it only accept certain regex or change the name of that parameter
+- Configure the middleware group used for authentication in case you are not using laravel defaults or want to use the redirect for another middleware group.
 
 ## Installation
 
